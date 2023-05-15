@@ -5,8 +5,8 @@ library(data.table)
 diamonds
 
 diamonds%>%
-  select(carat,cut,price)%>%
+  select(carat,cut,price,z)%>%
   filter(cut == "Premium")%>%
-  filter(price > 7000 & price < 10000)%>%
+  filter(price > 5000 & price <8000)%>%
   arrange(desc(carat))%>%
-  slice(1:20)
+  slice(1:30)
